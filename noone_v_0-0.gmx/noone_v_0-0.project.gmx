@@ -5,10 +5,56 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="Player">
+      <sprites name="Walk">
+        <sprite>sprites\spr_player_up</sprite>
+        <sprite>sprites\spr_player_left</sprite>
+        <sprite>sprites\spr_player_down</sprite>
+        <sprite>sprites\spr_player_right</sprite>
+      </sprites>
+    </sprites>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_temp_one</background>
+  </backgrounds>
   <paths name="paths"/>
-  <shaders name="shaders"/>
+  <scripts name="scripts">
+    <scripts name="state_machine">
+      <scripts name="Game">
+        <script>scripts\state_init.gml</script>
+        <script>scripts\state_process.gml</script>
+        <script>scripts\state_switch.gml</script>
+      </scripts>
+      <scripts name="Player">
+        <script>scripts\pl_state_init.gml</script>
+        <script>scripts\pl_state_process.gml</script>
+        <script>scripts\pl_state_switch.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="States">
+      <scripts name="Game">
+        <script>scripts\st_game_title.gml</script>
+        <script>scripts\st_game_select.gml</script>
+        <script>scripts\st_game_in_level.gml</script>
+        <script>scripts\st_game_menu_trans.gml</script>
+        <script>scripts\st_game_in_menu.gml</script>
+      </scripts>
+      <scripts name="Player">
+        <script>scripts\st_player_attack_sword_start.gml</script>
+        <script>scripts\st_player_attack_sword.gml</script>
+        <script>scripts\st_player_idle.gml</script>
+        <script>scripts\st_player_move.gml</script>
+        <script>scripts\st_player_get_vel.gml</script>
+      </scripts>
+    </scripts>
+  </scripts>
+  <objects name="objects">
+    <object>objects\obj_player</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_room1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
